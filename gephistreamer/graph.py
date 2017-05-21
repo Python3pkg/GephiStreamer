@@ -57,9 +57,9 @@ class Edge(Entity):
         Constructor
         '''
         if type(source)==Node:
-            source=next(iter(source.object.keys()))
+            source=next(iter(list(source.object.keys())))
         if type(target)==Node:   
-            target=next(iter(target.object.keys()))
+            target=next(iter(list(target.object.keys())))
             
         if not eid:
             eid = self._generate_id(source,target,directed)
